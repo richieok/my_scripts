@@ -1,8 +1,5 @@
 #! /usr/bin/bash
 cd ~
-curl -sL https://rpm.nodesource.com/setup_16.x | sudo bash -
-sudo yum install -y nodejs
-sudo npm i -g npm@latest
 
 access_token_param=/qubit-app-v1/access-token
 response=$(aws ssm get-parameter --name $access_token_param --region us-east-1 --with-decryption )
